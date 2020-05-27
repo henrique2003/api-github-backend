@@ -24,15 +24,12 @@ Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
     "bio": "Sua bio",<br />
     "github_username": "Seu repositório",<br />
     "avatar_url": "sua url de imagem de perfil"<br />
-  }<br />
+  }<br /><br />
 
 2 - Lista de usuários: <br />
   Rota - http://localhost:3001/api/users<br />
-  Método - GET <br />
-  JSON - <br />
-  {<br />
-    "name": "Seu nome",<br />
-    "bio": "Sua bio",<br />
-    "github_username": "Seu repositório",<br />
-    "avatar_url": "sua url de imagem de perfil"<br />
-  }<br />
+  Método - GET <br /><br />
+  
+3 - Ver um único usuário: <br />
+  Rota - http://localhost:3001/api/user/:idUsuário<br />
+  Método - GET <br /><br />
