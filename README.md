@@ -6,6 +6,7 @@ Projeto para estudar sobre crud no o typescript com informações que serão rec
 ## Pré-requisitos
  * Node js
  * npm ou yarn instalado
+ * Mongodb instalado e rodando na porta 27017 do localhost
  
 ## Tecnologias utilizados
   * Node js
@@ -14,6 +15,13 @@ Projeto para estudar sobre crud no o typescript com informações que serão rec
 ## Instalação
 Você pode instalar o projeto com o comando `git clone https://github.com/henrique2003/api-github-backend.git` ou clicando em clone or download
   
+## Como usar
+Para iniciar o projeto basta entrar na aplicação pelo cmd/terminal, e rodar o comando `npm run dev` ou `yarn dev`.
+Espere as seguintes menssagens aparecerem no console:<br />
+  MongoDb connect...<br />
+  API running<br />
+Pronto, agora está tudo pronto para começar a suar a api
+
 ## Rotas
 
 Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
