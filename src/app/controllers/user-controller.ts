@@ -1,5 +1,6 @@
 import { Request, Response } from 'express'
 import User from '../models/users'
+import { ServerError } from '../Errors/ServerError'
 
 class UserController {
   public async index (req: Request, res: Response): Promise<Response> {
@@ -8,7 +9,7 @@ class UserController {
 
       return res.status(200).json(users)
     } catch (error) {
-      return res.status(500).json(new Error('Server Error'))
+      return res.status(500).json(new ServerError())
     }
   }
 
@@ -24,7 +25,7 @@ class UserController {
 
       return res.status(200).json(user)
     } catch (error) {
-      return res.status(500).json(new Error('Server Error'))
+      return res.status(500).json(new ServerError())
     }
   }
 }
