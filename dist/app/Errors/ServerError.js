@@ -1,0 +1,9 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServerError = void 0;
+class ServerError extends Error {
+    constructor() {
+        super('Server Error');
+    }
+}
+exports.ServerError = ServerError;
