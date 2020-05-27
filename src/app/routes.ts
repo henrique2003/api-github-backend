@@ -1,9 +1,12 @@
 import { Router } from 'express'
+import UserController from './controllers/user-controller'
 
 const router = Router()
 
+const { index } = UserController
+
 // Index
-router.get('/user')
+router.get('/users', index)
 // Show
 router.get('/user/:id')
 // Store
