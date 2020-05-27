@@ -11,6 +11,9 @@ Projeto para estudar sobre crud no o typescript com informações que serão rec
   * Node js
   * TypeScript
   
+## Instalação
+Você pode instalar o projeto com o comando `git clone https://github.com/henrique2003/api-github-backend.git` ou clicando em clone or download
+  
 ## Rotas
 
 Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
