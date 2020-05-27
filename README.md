@@ -16,8 +16,20 @@ Projeto para estudar sobre crud no o typescript com informações que serão rec
 Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
 
 1 - Cadastro: <br />
-  Método: POST <br />
-  JSON:<br />
+  Rota - http://localhost:3001/api/user<br />
+  Método - POST <br />
+  JSON - <br />
+  {<br />
+    "name": "Seu nome",<br />
+    "bio": "Sua bio",<br />
+    "github_username": "Seu repositório",<br />
+    "avatar_url": "sua url de imagem de perfil"<br />
+  }<br />
+
+2 - Lista de usuários: <br />
+  Rota - http://localhost:3001/api/users<br />
+  Método - GET <br />
+  JSON - <br />
   {<br />
     "name": "Seu nome",<br />
     "bio": "Sua bio",<br />
