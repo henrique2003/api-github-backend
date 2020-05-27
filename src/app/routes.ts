@@ -3,16 +3,16 @@ import UserController from './controllers/user-controller'
 
 const router = Router()
 
-const { index } = UserController
+const { index, show, store, update } = UserController
 
 // Index
 router.get('/users', index)
 // Show
-router.get('/user/:id')
+router.get('/user/:id', show)
 // Store
-router.post('/user')
+router.post('/user', store)
 // Update
-router.put('/user')
+router.put('/user/:id', update)
 // Destroy
 router.delete('/user/:id')
 
