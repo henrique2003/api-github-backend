@@ -92,6 +92,22 @@ class UserController {
       return res.status(500).json(new ServerError())
     }
   }
+
+  public async destroy (req: Request, res: Response): Promise<Response> {
+    try {
+      const { id } = req.params
+
+      if (!id) {
+        return res.status(400).json(new Error('Id não encontrado'))
+      }
+
+      await User.findByIdAndDelete(id)
+
+      return res.status(200).json('Deletado com sucesso')
+    } catch (error) {
+      return res.status(500).json(new ServerError())
+    }
+  }
 }
 
 export default new UserController()

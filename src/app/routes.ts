@@ -3,7 +3,7 @@ import UserController from './controllers/user-controller'
 
 const router = Router()
 
-const { index, show, store, update } = UserController
+const { index, show, store, update, destroy } = UserController
 
 // Index
 router.get('/users', index)
@@ -14,6 +14,6 @@ router.post('/user', store)
 // Update
 router.put('/user/:id', update)
 // Destroy
-router.delete('/user/:id')
+router.delete('/user/:id', destroy)
 
 export default router
