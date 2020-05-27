@@ -33,3 +33,19 @@ Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
 3 - Ver um único usuário: <br />
   Rota - http://localhost:3001/api/user/:idUsuário<br />
   Método - GET <br /><br />
+  
+4 - Editar usuário: <br />
+  Rota - http://localhost:3001/api/user/:idUsuário<br />
+  Método - PUT <br />
+  JSON - <br />
+  {<br />
+    "name": "Seu nome",<br />
+    "bio": "Sua bio",<br />
+    "github_username": "Seu repositório",<br />
+    "avatar_url": "sua url de imagem de perfil"<br />
+  }<br /><br />
+  
+   
+3 - Deletar um usuário: <br />
+  Rota - http://localhost:3001/api/user/:idUsuário<br />
+  Método - DELETE <br /><br />
