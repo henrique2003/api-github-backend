@@ -58,3 +58,11 @@ Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
 3 - Deletar um usuário: <br />
   Rota - <http://localhost:3001/api/user/:idUsuário><br />
   Método - DELETE <br /><br />
+  
+## Como parar a palicação
+
+  Para parar é necessári somente apertar CTRL + C
+
+## Mais
+
+  Segue abaixo o repositório do front-end desta aplicação
