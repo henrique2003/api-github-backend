@@ -60,9 +60,7 @@ Nenhuma rota precisa de nenhum tipo de autênticação, confira a seguir:
   Método - DELETE <br /><br />
   
 ## Como parar a palicação
-
   Para parar é necessári somente apertar CTRL + C
 
 ## Mais
-
-  Segue abaixo o repositório do front-end desta aplicação
+  Segue abaixo o repositório do front-end desta aplicação ![https://github.com/henrique2003/github-api](https://github.com/henrique2003/github-api)
