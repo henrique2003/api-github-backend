@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import User, { UserInterface } from '../models/users'
+import User from '../models/users'
 import { ServerError } from '../Errors/ServerError'
 import axios from 'axios'
 
@@ -63,14 +63,13 @@ class UserController {
     try {
       const { body, params } = req
       const { id } = params
-      const { name, avatar_url, bio, github_username } = body
+      const { name, bio, github_username } = body
 
       if (!id) {
         return res.status(400).json(new Error('Id não encontrado'))
       }
 
       body.name = name.trim()
-      body.avatar_url = avatar_url.trim()
       body.bio = bio.trim()
       body.github_username = github_username.trim()
 
@@ -81,7 +80,7 @@ class UserController {
         github_username?: string
       } = {}
 
-      const isFields = ['name', 'avatar_url', 'bio', 'github_username']
+      const isFields = ['name', 'bio', 'github_username']
       for (const field of isFields) {
         if (field) userBody[field] = body[field]
       }
