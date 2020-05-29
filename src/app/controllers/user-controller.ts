@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
-import User from '../models/users'
+import User, { UserInterface } from '../models/users'
 import { ServerError } from '../Errors/ServerError'
+import axios from 'axios'
 
 class UserController {
   public async index (req: Request, res: Response): Promise<Response> {
@@ -32,18 +33,25 @@ class UserController {
   public async store (req: Request, res: Response): Promise<Response> {
     try {
       const { body } = req
-      const { name, avatar_url, bio, github_username } = body
+      const { github_username } = body
 
-      body.name = name.trim()
-      body.avatar_url = avatar_url.trim()
-      body.bio = bio.trim()
       body.github_username = github_username.trim()
 
-      if (!name || !avatar_url || !bio || !github_username) {
+      if (!github_username) {
         return res.status(400).json(new Error('Campo em branco'))
       }
 
-      const user = await User.create(body)
+      const dev = await axios.get(`https://api.github.com/users/${github_username as string}`)
+      const { name, avatar_url, bio, login } = dev.data
+
+      const newUser = {
+        name,
+        avatar_url,
+        bio,
+        github_username: login
+      }
+
+      const user = await User.create(newUser)
 
       return res.status(200).json(user)
     } catch (error) {
