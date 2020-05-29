@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Projeto para estudar sobre crud no o typescript com informações que serão recuperadas pelo font-end, vindas do github.
+Projeto para estudar sobre crud no o typescript feita com uma das apis do github.
 
 ## Pré-requisitos
 
